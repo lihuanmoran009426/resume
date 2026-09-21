@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李欢 · 简历 | 数据分析师</title>
+<style>
+  :root{
+    --ink:#14181f;
+    --ink-2:#3d4653;
+    --ink-3:#737d8c;
+    --line:#e4e8ee;
+    --line-2:#eef1f5;
+    --accent:#1d4ed8;
+    --accent-soft:#eff4ff;
+    --paper:#ffffff;
+    --bg:#f4f6f9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:15px;
+    padding:36px 16px 64px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:860px;
+    margin:0 auto;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    box-shadow:0 1px 2px rgba(20,24,31,.04),0 12px 32px -12px rgba(20,24,31,.12);
+    overflow:hidden;
+  }
+
+  /* ---------- header ---------- */
+  .hero{
+    padding:38px 46px 30px;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#fbfcfe 0%,#ffffff 100%);
+  }
+  .hero-top{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:.04em;
+    line-height:1.2;
+  }
+  .target{
+    font-size:14px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid #dbe6ff;
+    border-radius:999px;
+    padding:3px 14px;
+    font-weight:600;
+    white-space:nowrap;
+    margin-bottom:5px;
+  }
+  .subtitle{
+    font-size:15px;
+    color:var(--ink-2);
+    margin-bottom:16px;
+  }
+  .subtitle b{color:var(--ink);font-weight:600;}
+  .meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 28px;
+    font-size:13.5px;
+    color:var(--ink-2);
+  }
+  .meta span{display:inline-flex;align-items:center;gap:7px;}
+  .meta i{
+    display:inline-block;
+    width:5px;height:5px;border-radius:50%;
+    background:var(--accent);
+    flex:0 0 auto;
+  }
+
+  /* ---------- body ---------- */
+  .body{padding:8px 46px 44px;}
+
+  section{padding-top:26px;}
+  h2{
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.14em;
+    color:var(--accent);
+    padding-bottom:9px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h2::before{
+    content:"";
+    width:3px;height:15px;
+    background:var(--accent);
+    border-radius:2px;
+  }
+
+  .item{margin-bottom:20px;}
+  .item:last-child{margin-bottom:0;}
+  .item-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .item-title{font-size:15.5px;font-weight:600;color:var(--ink);}
+  .item-when{font-size:13px;color:var(--ink-3);white-space:nowrap;}
+
+  .courses{
+    font-size:14px;
+    color:var(--ink-2);
+    background:#fafbfd;
+    border:1px solid var(--line-2);
+    border-left:3px solid #c7d6f7;
+    border-radius:0 8px 8px 0;
+    padding:12px 16px;
+    margin-top:12px;
+  }
+  .courses b{color:var(--ink);font-weight:600;}
+
+  /* awards */
+  .awards{list-style:none;display:grid;gap:11px;}
+  .awards li{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:14.5px;
+    color:var(--ink);
+    flex-wrap:wrap;
+  }
+  .awards b{font-weight:600;}
+  .tag{
+    display:inline-block;
+    font-size:12px;
+    font-weight:600;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid #dbe6ff;
+    border-radius:5px;
+    padding:1px 9px;
+    white-space:nowrap;
+    flex:0 0 auto;
+  }
+  .muted{color:var(--ink-3);font-size:13.5px;}
+
+  .sub-label{
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:var(--ink-3);
+    margin:22px 0 11px;
+  }
+
+  /* certs */
+  .certs{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .certs li{
+    font-size:13.5px;
+    color:var(--ink-2);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:5px 13px;
+    background:#fff;
+  }
+
+  /* skills */
+  .skill{
+    display:grid;
+    grid-template-columns:112px 1fr;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .skill:last-child{border-bottom:none;padding-bottom:0;}
+  .skill-name{
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--ink);
+    padding-top:1px;
+  }
+  .skill-name span{
+    display:block;
+    font-size:11.5px;
+    font-weight:500;
+    letter-spacing:.1em;
+    color:var(--ink-3);
+    margin-top:2px;
+  }
+  .skill ul{list-style:none;}
+  .skill li{
+    font-size:14px;
+    color:var(--ink-2);
+    position:relative;
+    padding-left:15px;
+    margin-bottom:5px;
+  }
+  .skill li:last-child{margin-bottom:0;}
+  .skill li::before{
+    content:"";
+    position:absolute;
+    left:0;top:.62em;
+    width:5px;height:5px;
+    border-radius:50%;
+    background:#c2cbdb;
+  }
+  .skill li b{color:var(--ink);font-weight:600;}
+
+  /* strengths */
+  .strengths{list-style:none;display:grid;gap:11px;}
+  .strengths li{
+    font-size:14px;
+    color:var(--ink-2);
+    padding-left:20px;
+    position:relative;
+  }
+  .strengths li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:.6em;
+    width:7px;height:7px;
+    border-radius:2px;
+    background:var(--accent-soft);
+    border:1.5px solid var(--accent);
+  }
+  .strengths b{color:var(--ink);font-weight:600;}
+
+  footer{
+    margin-top:30px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--ink-3);
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  /* print button */
+  .print-bar{
+    max-width:860px;
+    margin:0 auto 14px;
+    display:flex;
+    justify-content:flex-end;
+  }
+  .print-btn{
+    font-family:inherit;
+    font-size:13px;
+    color:var(--ink-2);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:7px 16px;
+    cursor:pointer;
+    transition:.15s;
+  }
+  .print-btn:hover{color:var(--accent);border-color:#c7d6f7;background:var(--accent-soft);}
+
+  @media (max-width:640px){
+    body{padding:18px 10px 40px;}
+    .hero{padding:26px 22px 22px;}
+    .body{padding:4px 22px 32px;}
+    h1{font-size:26px;}
+    .skill{grid-template-columns:1fr;gap:7px;}
+    .hero-top{flex-direction:column;align-items:flex-start;gap:8px;}
+  }
+
+  @media print{
+    body{background:#fff;padding:0;font-size:12.5px;}
+    .page{border:none;box-shadow:none;border-radius:0;max-width:100%;}
+    .hero{padding:0 0 18px;}
+    .body{padding:0;}
+    .print-bar{display:none;}
+    section{padding-top:18px;break-inside:avoid;}
+    h2{font-size:13.5px;}
+    @page{margin:16mm 15mm;}
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">打印 / 导出 PDF</button>
+</div>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-top">
+      <h1>李欢</h1>
+      <div class="target">求职意向：数据分析师</div>
+    </div>
+    <p class="subtitle"><b>大连财经学院</b> · 管理学院 · 大数据管理与应用（本科）　｜　2026 届应届毕业生</p>
+    <div class="meta">
+      <span><i></i>邮箱　lihuan577512@qq.com</span>
+      <span><i></i>城市　大连</span>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <section>
+      <h2>教育背景</h2>
+      <div class="item">
+        <div class="item-head">
+          <div class="item-title">大连财经学院 · 管理学院 · 大数据管理与应用（本科）</div>
+          <div class="item-when">2026 年 6 月毕业</div>
+        </div>
+        <div class="courses">
+          <b>主修课程</b>：Python 数据分析、数据库原理与应用、应用统计学、数据挖掘、商务智能与数据可视化、Excel 高级数据分析
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>荣誉与获奖</h2>
+      <ul class="awards">
+        <li><span class="tag">省级</span><b>人工智能大赛 · 三等奖</b></li>
+        <li><span class="tag">校级</span><b>校级文献大赛 · 一等奖</b><span class="muted">大连财经学院主办</span></li>
+      </ul>
+
+      <div class="sub-label">职业资格证书</div>
+      <ul class="certs">
+        <li>普通话等级证书</li>
+        <li>全国计算机等级考试二级证书</li>
+        <li>初级会计职称证书</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>专业技能</h2>
+
+      <div class="skill">
+        <div class="skill-name">数据处理<span>DATA</span></div>
+        <ul>
+          <li><b>Python</b>（熟练）：pandas / numpy 数据处理与清洗</li>
+          <li><b>Java</b>（熟练）：脚本与后端数据处理开发</li>
+        </ul>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">数据库管理<span>DATABASE</span></div>
+        <ul>
+          <li><b>MySQL</b>（熟练）：SQL 查询、多表关联、视图与索引优化</li>
+        </ul>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">统计分析<span>STATS</span></div>
+        <ul>
+          <li>描述性与推断统计、数据清洗与异常值处理</li>
+          <li>假设检验、回归分析</li>
+        </ul>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">数据可视化<span>VISUAL</span></div>
+        <ul>
+          <li>Matplotlib / Seaborn、Excel 图表</li>
+          <li>Tableau / Power BI 及常用绘图工具</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>个人优势</h2>
+      <ul class="strengths">
+        <li><b>专业对口</b>：系统学习大数据管理与应用，掌握数据分析全流程能力</li>
+        <li><b>竞赛背书</b>：人工智能大赛省级三等奖、校级文献大赛一等奖，实践能力获认可</li>
+        <li><b>证书加成</b>：普通话、计算机二级、初级会计三证加持，综合素质扎实</li>
+        <li><b>工具全面</b>：编程、数据库、统计、可视化技能闭环，可独立承担分析任务</li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>李欢 · 数据分析师求职简历</span>
+      <span>更新于 2026-09-21</span>
+    </footer>
+
+  </div>
+</div>
+
+</body>
+</html>
